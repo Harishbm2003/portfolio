@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Main Container */
+.myprojects-container {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding: 40px 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Section Titles */
+.projects-heading, 
+.projects-title {
+    font-size: 2.8rem; /* Increased font size */
+    font-weight: 700;
+    margin-top: 50px; /* Increased spacing above headings */
+    color: #ffcc00;
+}
+
+.projects-subtitle {
+    font-size: 2rem; /* Increased font size */
+    font-weight: 600;
+    color: #f98f04;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+    cursor: pointer;
+}
+
+/* Hover Effect - Change Orange Text to Blue */
+.projects-subtitle:hover {
+  color: rgb(147, 246, 255);
+}
+
+/* Projects Grid - Two Images Per Row */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    gap: 40px; /* More spacing between images */
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Project Images - Bigger */
+.project-image {
+    width: 100%;
+    max-width: 650px; /* Increased image size */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Default soft shadow */
+    cursor: pointer;
+}
+
+/* Hover Effect - Orange Gradient Glow */
+.project-image:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px 5px rgba(255, 152, 0, 0.8), 
+                0 0 50px 10px rgba(255, 87, 34, 0.6); /* Orange glow effect */
+}
+
+/* Centering Last Image in the Row */
+.last-image-center {
+    grid-column: span 2; /* Span the last image across both columns */
+    margin: 0 auto; /* Center the image */
+    max-width: 850px; /* Slightly larger last image */
+    display: block; /* Ensures it centers properly */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .myprojects-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .projects-heading, 
+    .projects-title {
+        font-size: 2.2rem; /* Adjust font size */
+    }
+
+    .projects-subtitle {
+        font-size: 1.8rem; /* Increased font size for mobile */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .project-image {
+        max-width: 450px; /* Smaller images for mobile */
+    }
+}
+
+.myprojects-container h2 {
+    padding: 25px;
+}

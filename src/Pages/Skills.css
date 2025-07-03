@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    
+}
+
+
+/* Skills Section */
+/* Prevent Scrollbar Inside Skills Section */
+.skills-section {
+    width: 85%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center vertically */
+    color: #fff;
+    border-radius: 15px;
+    min-height: 100vh; /* Full viewport height */
+    margin: auto; /* Center horizontally */
+    overflow: hidden; /* Hide scrollbar only inside this section */
+}
+
+
+/* Title */
+.skills-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffcc00;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+/* Skills Container */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    width: 100%;
+}
+
+/* Skills Box */
+.skills-box {
+    background: linear-gradient(135deg, #400577, #7e1cff, #400c5e);
+    padding: 25px;
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    margin-top: 80px;
+}
+
+/* Hover Effect (Only for larger screens) */
+@media (hover: hover) and (min-width: 769px) {
+    .skills-box:hover {
+        transform: scale(1.08);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Skills Category */
+.skills-category {
+    width: 100%;
+    text-align: left;
+}
+
+/* Category Title */
+.skills-category h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+/* Skill List */
+.skills-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual Skill */
+.skills-category li {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Keep category name (Frontend, Backend, etc.) in yellow */
+.skills-category li strong {
+    color: yellow;
+}
+.skills-category li strong:hover {
+    color: rgb(0, 180, 240);
+}
+
+/* Change text color on hover (Only for larger screens) */
+@media (hover: hover) {
+    .skills-category li:hover {
+        color: #ffd849;
+    }
+}
+
+/* Bullet point checkmark */
+.skills-category li::before {
+    content: "✔";
+    color: #30fc26;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Skill Level Bar */
+.skill-level-container {
+    width: 100%;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Skill Fill Animation */
+.skill-fill {
+    height: 100%;
+    background: linear-gradient(to right, #f5fa72, #f98f04);
+    border-radius: 6px;
+    width: 0;
+    animation: fillAnimation 2s ease-in-out forwards;
+}
+
+/* Keyframes for the animation */
+@keyframes fillAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skill-width);
+    }
+}
+
+/* Skill Level Width */
+.skill-frontend { --skill-width: 99%; }
+.skill-backend { --skill-width: 85%; }
+.skill-state { --skill-width: 85%; }
+.skill-tools { --skill-width: 95%; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .skills-title {
+        font-size: 2rem;
+    }
+
+    .skills-box {
+        padding: 20px;
+    }
+
+    .skills-category h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-category li {
+        font-size: 1.2rem;
+    }
+}

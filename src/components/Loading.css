@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+/* body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* Fullscreen loading screen with background */
+.loading-screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Lower background opacity without affecting text */
+.loading-screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Images/blue.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+}
+
+/* Title styling with shadow */
+.loading-screen h1 {
+    font-size: 50px;
+    font-family: "Bruno Ace SC", sans-serif;
+    color: rgb(255, 255, 255); /* Ensures visibility */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Black shadow for better readability */
+    margin-bottom: 20px;
+    z-index: 1;
+    font-weight: bolder;
+}
+
+/* Progress bar container */
+.progress {
+    width: 60%;  
+    max-width: 400px;
+    height: 20px; 
+    border-radius: 10px; 
+    background-color: rgba(255, 255, 255, 0.3); 
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Animated progress bar */
+.progress-bar {
+    background-color: rgb(21, 67, 175) !important;
+    width: 0%;
+    animation: progressAnimation 2s ease-in-out forwards;
+}
+
+/* Smooth progress animation */
+@keyframes progressAnimation {
+    0% { width: 0%; }
+    100% { width: 95%; }
+}

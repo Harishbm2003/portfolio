@@ -1,0 +1,287 @@
+/* Container for Designs */
+.designs-wrapper {
+    width: 100%;
+    max-width: 2000px;
+    padding: 100px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden; /* Removes inner scroll */
+    box-sizing: border-box;
+}
+
+/* Section Title */
+.designs-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffcc00;
+    margin: 20px 0;
+    padding-top: 10px;
+}
+
+.designs-subtitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff7700;
+    margin: 15px 0 10px;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Hover Effect on Subtitle */
+.designs-subtitle:hover {
+    color: #00ccff;
+}
+
+/* Image Section */
+.designs-gallery {
+    display: flex;
+    flex-direction: column; /* One image per row */
+    width: 100%;
+    max-width: 1800px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Design Image */
+.designs-image {
+    width: 100%;
+    max-width: 1400px; /* Slightly reduced size */
+    height: auto;
+    object-fit: cover;
+    padding: 15px;
+    border-radius: 10px; /* Slightly rounded corners */
+    transition: border 0.2s ease-in-out;
+}
+
+/* Border Effect on Hover */
+.designs-image:hover {
+    border: 4px solid #ffcc00;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1600px) {
+    .designs-gallery {
+        max-width: 1400px;
+    }
+
+    .designs-image {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .designs-wrapper {
+        padding: 80px 50px;
+    }
+
+    .designs-gallery {
+        max-width: 1000px;
+    }
+
+    .designs-image {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 992px) {
+    .designs-wrapper {
+        padding: 70px 40px;
+    }
+
+    .designs-image {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .designs-wrapper {
+        padding: 40px 20px;
+    }
+
+    .designs-title {
+        font-size: 2.8rem;
+        margin: 20px 0;
+    }
+
+    .designs-subtitle {
+        font-size: 2.2rem;
+        margin: 15px 0 10px;
+    }
+
+    .designs-image {
+        max-width: 700px;
+    }
+
+    .designs-gallery {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+}
+
+/* Ensures Layout Fits Without Scroll */
+.designs-wrapper, .designs-gallery {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Wrapper for Graphic Design Page */
+.graphicdesign-page .designs-wrapper {
+    width: 100%;
+    max-width: 2000px;
+    padding: 100px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Section Title */
+.graphicdesign-page .designs-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffcc00;
+    margin: 20px 0;
+    padding-top: 10px;
+}
+
+.graphicdesign-page .designs-subtitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff7700;
+    margin: 15px 0 10px;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Hover Effect on Subtitle */
+.graphicdesign-page .designs-subtitle:hover {
+    color: #00ccff;
+}
+
+/* Image Section */
+.graphicdesign-page .designs-gallery {
+    display: flex;
+    flex-direction: column; /* One image per row */
+    width: 100%;
+    max-width: 1800px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Design Image */
+.graphicdesign-page .designs-image {
+    width: 85%;
+    max-width: 1200px;
+    height: auto;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: 10px;
+    transition: border 0.2s ease-in-out;
+}
+
+/* Border Effect on Hover */
+.graphicdesign-page .designs-image:hover {
+    border: 4px solid #ffcc00;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1600px) {
+    .graphicdesign-page .designs-gallery {
+        max-width: 1400px;
+    }
+
+    .graphicdesign-page .designs-image {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .graphicdesign-page .designs-wrapper {
+        padding: 80px 50px;
+    }
+
+    .graphicdesign-page .designs-gallery {
+        max-width: 1000px;
+    }
+
+    .graphicdesign-page .designs-image {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 992px) {
+    .graphicdesign-page .designs-wrapper {
+        padding: 70px 40px;
+    }
+
+    .graphicdesign-page .designs-image {
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .graphicdesign-page .designs-wrapper {
+        padding: 40px 20px;
+    }
+
+    .graphicdesign-page .designs-title {
+        font-size: 2.8rem;
+        margin: 20px 0;
+    }
+
+    .graphicdesign-page .designs-subtitle {
+        font-size: 2.2rem;
+        margin: 15px 0 10px;
+    }
+
+    .graphicdesign-page .designs-image {
+        max-width: 700px;
+    }
+
+    .graphicdesign-page .designs-gallery {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+}
+
+/* Ensures Layout Fits Without Scroll */
+.graphicdesign-page .designs-wrapper, .graphicdesign-page .designs-gallery {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}

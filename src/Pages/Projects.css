@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Projects Section */
+.projects-section {
+    width: 85%;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 80px auto 0; /* Added margin-top for space */
+}
+
+/* Title */
+.projects-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffcc00;
+    margin-bottom: 30px;
+}
+
+/* Projects Container */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Project Box */
+.project-box {
+    background: linear-gradient(135deg, #400577, #7e1cff, #400c5e);
+    padding: 30px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    min-height: 300px;
+}
+
+/* Hover Effect */
+@media (hover: hover) {
+    .project-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Icon Container */
+.icon-container {
+    font-size: 3rem;
+    
+    color: #ffcc00;
+}
+
+/* Project Title */
+.project-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #ffcc00;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-title:hover {
+    color: #00ccff;
+}
+
+/* Project Description */
+.project-description {
+    padding: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: left;
+    margin-top: 15px;
+}
+
+/* Bullet Points (Only One Per Line) */
+.project-description li {
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    margin-bottom: 15px; /* Added space between points */
+    position: relative;
+    padding-left: 22px;
+    list-style: none;
+}
+
+/* Single Bullet Point */
+.project-description li::before {
+    content: "•"; /* Single bullet point */
+    position: absolute;
+    left: 0;
+    color: #ffcc00;
+    font-size: 1.4rem;
+}
+
+/* Hover Effect */
+.project-description li:hover {
+    color: rgb(147, 246, 255);
+}
+
+/* Highlight Important Words */
+.highlight {
+    font-weight: bold;
+    color: #ffcc00;
+    display: inline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .projects-title {
+        font-size: 2.2rem;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-box {
+        width: 90%;
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .project-title {
+        font-size: 1.6rem;
+    }
+
+    .project-description {
+        font-size: 1.2rem;
+    }
+
+    .icon-container {
+        font-size: 2.8rem;
+    }
+
+    .project-description li {
+        padding-left: 18px;
+    }
+
+    /* Fix for large bullet points on mobile */
+    .project-description li::before {
+        font-size: 1.2rem; /* Adjusted for mobile */
+    }
+}

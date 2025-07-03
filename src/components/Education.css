@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.education-section {
+    display: flex; 
+    flex-direction: column;
+    padding: 50px 20px;
+    margin: 0 auto; /* Center section in the view */
+    max-width: 800px; /* Set a max width for content */
+    width: 100%; /* Responsive width */
+    border-radius: 12px; /* Optional rounded corners */
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 60px; /* Increased padding for better spacing */
+    border-left: 4px solid #ffcc00;
+    overflow: visible;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #400577, #7e1cff, #400c5e);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    width: calc(100% - 60px); /* Ensures proper width */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.timeline-date {
+    position: absolute;
+    top: 50%;
+    left: -100px; /* Adjusted further left for better spacing */
+    transform: translateY(-50%);
+    background: #ffcc00;
+    color: #0d001a;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.timeline-content {
+    margin-left: 30px; /* Adds more spacing between date and content */
+}
+
+.timeline-content h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: yellow;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 2px 0;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 15px; /* Adjusted padding for smaller screens */
+        border-left: 3px solid #ffcc00;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding: 15px;
+        margin-left: 10px; /* Adds spacing between the border and content */
+        position: relative;
+    }
+
+    .timeline-date {
+        position: relative; /* Removes absolute positioning */
+        left: 0;
+        top: 0;
+        margin-bottom: 10px; /* Creates space between date and content */
+        display: inline-block; /* Keeps date aligned properly */
+        background: #ffcc00;
+        color: #0d001a;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    .timeline-content {
+        margin-left: 0; /* Aligns content properly */
+        padding-left: 10px;
+    }
+}
+
+
+    .timeline-content {
+        margin-left: 30px; /* Adds space between date and content */
+        padding-left: 10px;
+    }
+
+
+.education-title {
+    color: gold;
+    font-weight: bold;
+    margin-top: 16px;
+}

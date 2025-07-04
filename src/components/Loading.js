@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Loading.css'; 
-import blue from '../Images/blue.jpg';
+// import blue from '../Images/blue.jpg';
 
 const Loading = () => {
   return (

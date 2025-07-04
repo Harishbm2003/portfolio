@@ -34,7 +34,6 @@ const Navbar = () => {
               <button 
                 className="btn myprojects-btn dropdown-toggle" 
                 id="navbarDropdown" 
-                role="button" 
                 data-bs-toggle="dropdown" 
                 aria-expanded="false"
               >
